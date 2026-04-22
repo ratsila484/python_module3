@@ -5,7 +5,7 @@ from typing import Generator
 
 
 def gen_event(
-            list_players: list[str], 
+            list_players: list[str],
             list_actions: list[str]
             ) -> Generator[tuple[str, str], None, None]:
     while True:
@@ -28,7 +28,7 @@ def consume_event(
 
 if __name__ == "__main__":
     list_players: list[str] = [
-        "bob", "alice", "dylan", "charlie"  
+        "bob", "alice", "dylan", "charlie"
     ]
     list_actions: list[str] = [
         "run", "eat", "sleep", "grab",
@@ -46,9 +46,8 @@ if __name__ == "__main__":
     for i in range(10):
         temp_gen = next(gen)
         ten_gen.append(temp_gen)
-    print(f"Built list of 10 events: {ten_gen}")   
-    consume_gen = consume_event(ten_gen) 
+    print(f"Built list of 10 events: {ten_gen}")
+    consume_gen = consume_event(ten_gen)
     for i in range(len(ten_gen)):
         ten_gen = next(consume_gen)
         print(f"Remains in list: {ten_gen}")
-        

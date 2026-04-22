@@ -4,7 +4,7 @@ import sys
 
 
 class InvalidParameter(Exception):
-    def __init__(self, error:str = "Unknown error") -> None:
+    def __init__(self, error: str = "Unknown error") -> None:
         super().__init__(error)
 
 
